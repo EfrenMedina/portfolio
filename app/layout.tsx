@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const siteUrl = "https://portfolio.vercel.app"; // TODO: set to your real domain
+const siteUrl = "https://efrenmedina.vercel.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

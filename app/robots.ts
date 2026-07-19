@@ -1,7 +1,6 @@
 import type { MetadataRoute } from "next";
 
-// TODO: set to your real domain once deployed.
-const baseUrl = "https://portfolio.vercel.app";
+const baseUrl = "https://efrenmedina.vercel.app";
 
 export default function robots(): MetadataRoute.Robots {
   return {
