@@ -6,7 +6,7 @@
 
 export const profile = {
   name: "Efren Medina Arias",
-  title: "Software Developer",
+  title: "Software Engineer",
   bio: "Computer Science student at the University of Toronto who loves architecting software that solves meaningful problems and makes an impact.",
   email: "efren.medinaarias@mail.utoronto.ca",
   location: "Toronto, Ontario",
