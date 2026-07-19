@@ -1,30 +1,30 @@
 /**
  * ─────────────────────────────────────────────────────────────
  *  SITE CONTENT — edit this one file to update the whole site.
- *  Items marked `TODO` are placeholders: replace with your info.
  * ─────────────────────────────────────────────────────────────
  */
 
 export const profile = {
   name: "Efren Medina Arias",
   title: "Software Developer",
-  // Short bio shown under your name in the sidebar.
-  bio: "Building thoughtful, performant software. Passionate about clean architecture and great user experiences.", // TODO: make this yours
-  email: "efren.medinaarias@gmail.com",
-  location: "Canada", // TODO: e.g. "Toronto, Canada"
+  bio: "Computer Science student at the University of Toronto who loves architecting software that solves meaningful problems and makes an impact.",
+  email: "efren.medinaarias@mail.utoronto.ca",
+  location: "Toronto, Ontario",
   photo: "/profile.webp",
   socials: {
-    github: "https://github.com/EfrenMedina", // TODO: confirm your GitHub URL
-    linkedin: "https://linkedin.com/in/your-handle", // TODO: your LinkedIn URL
+    github: "https://github.com/EfrenMedina",
+    linkedin: "https://linkedin.com/in/efrenmedinaa",
   },
 };
 
 /** Grouped skill pills (like the template's "Core Skills"). */
 export const skills: { category: string; items: string[] }[] = [
-  { category: "Languages", items: ["Python", "JavaScript", "TypeScript", "Java"] },
-  { category: "Frontend", items: ["React", "Next.js", "HTML", "CSS", "Tailwind"] },
-  { category: "Backend", items: ["FastAPI", "Spring Boot", "Node.js"] },
-  { category: "Tools", items: ["Git", "Docker"] }, // TODO: adjust to your real stack
+  {
+    category: "Languages",
+    items: ["Python", "TypeScript", "JavaScript", "HTML", "CSS", "PostgreSQL", "R"],
+  },
+  { category: "Frameworks", items: ["React", "Next.js", "FastAPI", "Tailwind"] },
+  { category: "Tools", items: ["Git", "Docker", "Azure", "CI/CD", "VS Code"] },
 ];
 
 export const education: {
@@ -34,10 +34,10 @@ export const education: {
   description: string;
 }[] = [
   {
-    school: "Your University", // TODO
-    credential: "Your Degree / Program", // TODO
-    date: "Sep 2022 – Present", // TODO
-    description: "Relevant coursework, honors, or focus areas.", // TODO
+    school: "University of Toronto",
+    credential: "B.S. in Computer Science",
+    date: "2025 – 2029",
+    description: "GPA: 4.00 / 4.00",
   },
 ];
 
@@ -45,19 +45,32 @@ export const experience: {
   role: string;
   company: string;
   date: string;
-  description: string;
+  description: string | string[];
 }[] = [
   {
-    role: "Job Title", // TODO
-    company: "Company Name", // TODO
-    date: "Sep 2024 – Present", // TODO
-    description: "What you did and the impact you made.", // TODO
+    role: "Software Engineering Intern",
+    company: "Invictus Accounting Group — Vancouver, BC",
+    date: "May 2026 – Aug 2026",
+    description: [
+      "Engineered a Microsoft Word plugin end-to-end in Next.js, Tailwind, and Office.js with a Next.js BFF over a FastAPI backend, containerized with Docker and deployed on Azure to serve 50+ accountants.",
+      "Built REST APIs in Python/FastAPI and authored PostgreSQL queries and schema migrations across a multi-service Azure platform.",
+      "Turned financial-reporting and Transformer-based document pipelines into production features alongside domain experts and ML engineers.",
+      "Contributed to code reviews, Agile sprint planning, and daily syncs while writing tests, fixing bugs, and improving CI/CD pipelines.",
+    ],
   },
   {
-    role: "Job Title", // TODO
-    company: "Company Name", // TODO
-    date: "Jan 2023 – Aug 2023", // TODO
-    description: "What you did and the impact you made.", // TODO
+    role: "Recreational Program Instructor",
+    company: "City of Port Alberni, BC",
+    date: "Mar 2025 – Aug 2025",
+    description:
+      "Led recreational programs, camps, and community events for 500+ participants across diverse age groups, and coordinated youth sports and logistics for large-scale events.",
+  },
+  {
+    role: "Recreational Program Assistant",
+    company: "City of Port Alberni, BC",
+    date: "Sep 2023 – Mar 2025",
+    description:
+      "Supported program delivery, participant engagement, and event setup across community recreation activities.",
   },
 ];
 
@@ -69,28 +82,20 @@ export const projects: {
   href: string;
 }[] = [
   {
-    tag: "Web",
-    name: "Project Name", // TODO
+    tag: "AI / Web",
+    name: "AI-Powered Syllabus-to-Calendar Tool",
     description:
-      "A short description of what this project does and the technologies used to build it.", // TODO
-    tech: ["React", "Node.js", "MongoDB"],
-    href: "https://github.com/EfrenMedina", // TODO: repo or live URL
+      "Parses a university syllabus PDF and automatically extracts every deadline and event into a structured calendar, saving students manual entry. Full stack in React and FastAPI, connecting a pdfplumber pipeline to the Anthropic Claude API.",
+    tech: ["React", "FastAPI", "Python", "Claude API"],
+    href: "https://github.com/EfrenMedina", // TODO: link the specific repo
   },
   {
-    tag: "CLI Tool",
-    name: "Project Name", // TODO
+    tag: "Tool",
+    name: "UofT Course Navigator",
     description:
-      "A short description of what this project does and the technologies used to build it.", // TODO
-    tech: ["Python", "SQLite"],
-    href: "https://github.com/EfrenMedina", // TODO
-  },
-  {
-    tag: "Data",
-    name: "Project Name", // TODO
-    description:
-      "A short description of what this project does and the technologies used to build it.", // TODO
-    tech: ["Python", "FastAPI"],
-    href: "https://github.com/EfrenMedina", // TODO
+      "Scraped 5,000+ UofT courses, modelled prerequisite logic as custom tree structures, and built a directed course graph with a Tkinter GUI so students can explore course eligibility.",
+    tech: ["Python", "Tkinter"],
+    href: "https://github.com/EfrenMedina", // TODO: link the specific repo
   },
 ];
 

@@ -2,7 +2,8 @@ export type TimelineItem = {
   title: string;
   subtitle: string;
   date: string;
-  description: string;
+  /** A single paragraph, or several bullet points. */
+  description: string | string[];
 };
 
 /** Vertical timeline with dots + connector line (Education & Experience). */
@@ -23,9 +24,17 @@ export function Timeline({ items }: { items: TimelineItem[] }) {
             <span className="shrink-0 text-sm text-muted">{item.date}</span>
           </div>
           <p className="text-sm font-medium text-muted">{item.subtitle}</p>
-          <p className="mt-1.5 text-sm leading-relaxed text-muted">
-            {item.description}
-          </p>
+          {Array.isArray(item.description) ? (
+            <ul className="mt-2 list-disc space-y-1 pl-4 text-sm leading-relaxed text-muted marker:text-accent">
+              {item.description.map((point, j) => (
+                <li key={j}>{point}</li>
+              ))}
+            </ul>
+          ) : (
+            <p className="mt-1.5 text-sm leading-relaxed text-muted">
+              {item.description}
+            </p>
+          )}
         </li>
       ))}
     </ol>

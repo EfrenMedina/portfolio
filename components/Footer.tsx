@@ -64,9 +64,8 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-10 flex flex-col justify-between gap-2 border-t border-border pt-6 text-sm text-muted sm:flex-row">
+        <div className="mt-10 border-t border-border pt-6 text-sm text-muted">
           <span>© {new Date().getFullYear()} {profile.name}.</span>
-          <span>Built with Next.js &amp; Tailwind CSS.</span>
         </div>
       </div>
     </footer>

@@ -1,5 +1,6 @@
 import { skills } from "@/lib/data";
 import { Section } from "./Section";
+import { TechIcon } from "./TechIcon";
 
 export function Skills() {
   return (
@@ -12,8 +13,9 @@ export function Skills() {
               {group.items.map((item) => (
                 <li
                   key={item}
-                  className="rounded-full border border-border bg-pill px-3 py-1 text-sm text-foreground"
+                  className="flex items-center gap-1.5 rounded-full border border-border bg-pill px-3 py-1 text-sm text-foreground"
                 >
+                  <TechIcon name={item} className="h-3.5 w-3.5 text-muted" />
                   {item}
                 </li>
               ))}

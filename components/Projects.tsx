@@ -1,5 +1,6 @@
 import { ArrowUpRight } from "lucide-react";
 import { projects } from "@/lib/data";
+import { TechIcon } from "./TechIcon";
 
 export function Projects() {
   return (
@@ -30,8 +31,9 @@ export function Projects() {
               {project.tech.map((t) => (
                 <li
                   key={t}
-                  className="rounded-md border border-border bg-pill px-2 py-0.5 text-xs text-muted"
+                  className="flex items-center gap-1 rounded-md border border-border bg-pill px-2 py-0.5 text-xs text-muted"
                 >
+                  <TechIcon name={t} className="h-3 w-3" />
                   {t}
                 </li>
               ))}
